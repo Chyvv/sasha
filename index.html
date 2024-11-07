@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для любимой</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcomePage" class="background welcomePageBg">
+        <h1 class="animatedText">Для любимой</h1>
+        <button onclick="goToPage(1)">Продолжить</button>
+    </div>
+
+    <div id="page1" class="hidden background page1Bg">
+        <h1>Ты меня любишь?</h1>
+        <button id="yes1" onclick="goToPage(2)">Да</button>
+        <button id="no1">Нет</button>
+    </div>
+
+    <div id="page2" class="hidden background page2Bg">
+        <h1>А кто моя любимая кисунья?????</h1>
+        <button id="yes2" onclick="goToPage(3)">Я</button>
+        <button id="no2" onclick="hideNoButton()">Не Я</button>
+    </div>
+
+    <div id="page3" class="hidden background page3Bg">
+        <h1>А в попу дашь?))))</h1>
+        <button id="yes3" onclick="showFinalMessage()">Дам</button>
+        <button id="no3" onclick="showOnlyYes()">Нет</button>
+        <div id="finalMessage" class="hidden">
+            <p>А надо дать, хоть разочек</p>
+            <button onclick="showFinalGif()">Точно дам</button>
+        </div>
+    </div>
+
+    <div id="finalGif" class="hidden background finalGifBg">
+        <img src="final.gif" alt="Final GIF"> <!-- Убедитесь, что файл final.gif находится в папке с сайтом -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
